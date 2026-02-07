@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,7 +63,7 @@ public class HeaderFragment extends AnutoFragment implements WaveManager.Listene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mHandler = new Handler();
+        mHandler = new Handler(Looper.getMainLooper());
 
         View v = inflater.inflate(R.layout.fragment_header, container, false);
 

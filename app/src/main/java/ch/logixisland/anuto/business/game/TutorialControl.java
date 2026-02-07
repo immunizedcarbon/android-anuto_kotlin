@@ -2,7 +2,7 @@ package ch.logixisland.anuto.business.game;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
+import androidx.preference.PreferenceManager;
 
 import ch.logixisland.anuto.Preferences;
 import ch.logixisland.anuto.R;

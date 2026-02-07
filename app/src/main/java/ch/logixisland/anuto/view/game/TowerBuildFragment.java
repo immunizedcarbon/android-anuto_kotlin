@@ -3,6 +3,7 @@ package ch.logixisland.anuto.view.game;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +50,7 @@ public class TowerBuildFragment extends AnutoFragment implements TowerSelector.T
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mHandler = new Handler();
+        mHandler = new Handler(Looper.getMainLooper());
 
         View v = inflater.inflate(R.layout.fragment_tower_build, container, false);
 
