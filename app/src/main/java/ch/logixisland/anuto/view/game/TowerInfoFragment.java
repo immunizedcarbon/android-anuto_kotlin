@@ -3,6 +3,7 @@ package ch.logixisland.anuto.view.game;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,7 +84,7 @@ public class TowerInfoFragment extends AnutoFragment implements View.OnClickList
         btn_upgrade.setOnClickListener(this);
         btn_sell.setOnClickListener(this);
 
-        mHandler = new Handler();
+        mHandler = new Handler(Looper.getMainLooper());
 
         return v;
     }

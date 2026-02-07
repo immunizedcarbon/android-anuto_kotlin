@@ -4,6 +4,7 @@ import android.content.ClipData;
 import android.graphics.Canvas;
 import android.graphics.Point;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -38,7 +39,7 @@ class TowerViewControl implements GameLoader.Listener, ScoreBoard.Listener, View
         mTowerInserter = factory.getTowerInserter();
         mEntityRegistry = factory.getEntityRegistry();
 
-        mHandler = new Handler();
+        mHandler = new Handler(Looper.getMainLooper());
 
         mGameLoader.addListener(this);
         mScoreBoard.addListener(this);

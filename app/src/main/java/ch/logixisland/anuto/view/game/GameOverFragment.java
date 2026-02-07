@@ -3,6 +3,7 @@ package ch.logixisland.anuto.view.game;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +37,7 @@ public class GameOverFragment extends AnutoFragment implements GameState.Listene
 
         txt_score = v.findViewById(R.id.txt_score);
 
-        mHandler = new Handler();
+        mHandler = new Handler(Looper.getMainLooper());
 
         // in case it is already game over on initialization
         updateScore();
